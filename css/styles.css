@@ -499,6 +499,8 @@ span {
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -512,30 +514,27 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   display: flex;
   width: 24px;
   height: 24px;
   fill: #2e2f42;
+  background-color: #e7e9fc;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
-  transition: fill, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-btn {
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: 24px;
-  border-radius: 50%;
-  background-color: #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
@@ -543,6 +542,10 @@ span {
   background-color: #404bbf;
   border: none;
   fill: #fff;
+}
+
+.modal-icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -573,7 +576,7 @@ span {
   background-color: transparent;
   margin-bottom: 8px;
   padding-left: 38px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -596,8 +599,9 @@ span {
 .modal-icon {
   position: absolute;
   fill: #2e2f42;
-  left: 19px;
-  top: 8px;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
