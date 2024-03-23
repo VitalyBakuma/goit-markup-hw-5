@@ -417,11 +417,13 @@ span {
   padding: 100px 0;
 }
 
-
+.footer-line {
+  display: flex;
+  justify-content: space-between;
+}
 
 .footer-social-bottom {
   display: flex;
-  justify-content: space-between;
 }
 
 .footer-logo-text {
