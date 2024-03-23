@@ -416,11 +416,16 @@ span {
   background-color: #2e2f42;
   padding: 100px 0;
 }
-.footer .container {
+.footer-container {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  align-items: last baseline;
+  /* width: 100%; */
 }
+
+.footer-form {
+  margin-left: 80px;
+}
+
 .footer-social-bottom {
   display: flex;
 }
@@ -552,6 +557,7 @@ span {
   text-align: center;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .email-icon-footer {
