@@ -522,23 +522,33 @@ span {
 }
 
 .modal-close {
+  display: flex;
   width: 24px;
   height: 24px;
+  fill: #2e2f42;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  transition: background-color, fiil 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.close-btn {
   display: block;
+  width: 24px;
+  height: 24px;
   margin-left: auto;
   margin-top: auto;
   margin-bottom: 24px;
   border-radius: 50%;
-  fill: #e7e9fc;
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
 }
 
-.modal-icon-close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: #2e2f42;
+.modal-close:hover,
+.modal-close:focus + .modal-icon-close {
+  background-color: #404bbf;
+  border: none;
+  fill: #fff;
 }
 
 .modal-title {
@@ -666,7 +676,6 @@ span {
   padding: 16px 32px;
   margin-top: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .modal-btn:hover,
