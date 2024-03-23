@@ -644,13 +644,12 @@ span {
 }
 
 .check-text {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-bottom: 24px;
 }
 
 .check-text .modal-check-btn {
@@ -679,6 +678,10 @@ span {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+
+.modal-check {
+  margin-bottom: 24px;
 }
 
 .modal-btn {
